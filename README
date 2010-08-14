@@ -1,0 +1,22 @@
+# clojurejit
+
+Adds a just in time compilation gen-class that takes method implementations in-line instead of having them defined separately. This requires clojure 1.2.0 
+
+## Usage
+
+Interface is exactly like the gen-class macro (http://richhickey.github.com/clojure/clojure.core-api.html#clojure.core/gen-class), except without the following keywords:
+* prefix
+* impl-ns 
+* load-impl-ns
+
+The input to the methods keyword is still a vector of vectors, but needs 4 elements: name, parameter types, return type, and method implementation as a function.
+
+## Installation
+
+lein deps
+lein javac
+lein jar
+
+## License
+
+Err... none?
